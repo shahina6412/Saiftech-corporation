@@ -3,11 +3,225 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Learn Tailwind</title>
-    <link rel="stylesheet" href="./css/tailwind.css" />
+    <title>Saiftech Corporation</title>
+    <link rel="icon" href="" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body>
-    <h1 class="text- [50px]">Hello Shahina</h1>
-    <div class="bg-sky-900"></div>
+  <body class="font-poppins">
+    <header class="border-b-[1px] border-gray-200 hidden lg:block xl:block">
+      <!-- icon start------------- -->
+      <div class="container max-w-[1140px] mx-auto">
+        <div class="flex items-center justify-between py-4 lg:px-8">
+          <div>
+            <ul class="flex items-center justify-start gap-2">
+              <li>
+                <a
+                  class="rounded-full bg-primary p-2 flex items-center justify-center w-[30px] h-[30px] hover:bg-icon duration-400"
+                  ><i class="fa-brands fa-facebook-f text-white"></i
+                ></a>
+              </li>
+              <li
+                class="rounded-full bg-primary p-2 flex items-center justify-center w-[30px] h-[30px] hover:bg-icon duration-400"
+              >
+                <a href=""><i class="fa-brands fa-instagram text-white"></i></a>
+              </li>
+              <li
+                class="rounded-full bg-primary p-2 flex items-center justify-center w-[30px] h-[30px] hover:bg-icon duration-400"
+              >
+                <a href=""
+                  ><i class="fa-brands fa-linkedin-in text-white"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <!-- icon end----------------- -->
+          <div>
+            <h2 class="text-[20.8px] text-font font-semibold">
+              <i class="mr-2 fa-solid fa-right-to-bracket text-primary"></i>SAIF
+              TECH CORPORATION
+            </h2>
+          </div>
+          <div>
+            <div>
+              <ul class="flex items-center justify-end gap-5">
+                <li>
+                  <a href="" class="text-font text-[14px]"
+                    ><i class="fa-solid fa-phone text-primary mr-2"></i>+88
+                    01712-63873</a
+                  >
+                </li>
+
+                <li>
+                  <a href="" class="text-font text-[14px]"
+                    ><i class="fa-solid fa-envelope text-primary mr-2"></i
+                    >shahina6412@gmail.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav>
+      <div class="container pl-6 max-w-[1140px] mx-auto">
+        <div class="flex items-center justify-between">
+          <div>
+            <a href="">
+              <img
+                src="./New folder/logo.png"
+                alt=""
+                class="w-[120px] h-[80px] items-center"
+            /></a>
+          </div>
+          <div class="md:hidden">
+            <button>
+              <i
+                class="fa-solid fa-bars text-primary text-[20px] mr-[10px]"
+              ></i>
+            </button>
+          </div>
+          <div class="hidden md:block">
+            <ul class="flex items-center justify-center gap-0">
+              <li>
+                <a
+                  href=""
+                  class="text-[14px] text-primary py-5 px-4 border-b-[4px] font-medium inline-block"
+                  >Home</a
+                >
+              </li>
+              <li class="group">
+                <a
+                  href=""
+                  class="text-[14px] text-font py-5 px-4 inline-block hover:text-primary duration-300"
+                  >About Us</a
+                >
+                <div
+                  class="h-[3px] w-0 group-hover:w-full bg-primary duration-300"
+                ></div>
+              </li>
+
+              <li class="group">
+                <a
+                  href=""
+                  class="text-[14px] text-font py-5 px-4 inline-block hover:text-primary duration-300"
+                  >Services</a
+                >
+                <div
+                  class="h-[4px] w-0 group-hover:w-full bg-primary duration-300"
+                ></div>
+              </li>
+              <!--  1st dropdown----------------- -->
+              <li class="group relative">
+                <a
+                  href=""
+                  class="text-[14px] text-font py-5 px-4 font-medium inline-block hover:text-primary duration-300"
+                  >Product<i class="fa-solid fa-angle-down text-[14px]"></i
+                ></a>
+                <div
+                  class="h-[3px] w-0 group-hover:w-full bg-primary duration-300"
+                ></div>
+
+                <ul
+                  class="absolute w-[250px] border-l-[4px] border-primary shadow-lg scale-0 group-hover:scale-100 duration-700 origin-[2%_2%] transform-flat"
+                >
+                  <li
+                    class="text-gray-600 border-b-[2px] border-dashed border-gray-300 hover:text-primary"
+                  >
+                    <a href="" class="p-3 inline-block text-[14px]"
+                      >Domestic-Water-Purifier</a
+                    >
+                  </li>
+                  <li
+                    class="text-gray-600 border-b-[2px] border-gray-300 border-dashed hover:text-primary"
+                  >
+                    <a href="" class="p-3 inline-block text-[14px]"
+                      >Filtration-Media-Chemicals</a
+                    >
+                  </li>
+                  <li class="text-gray-600 hover:text-primary">
+                    <a href="" class="p-3 inline-block text-[14px]"
+                      >accessories</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <!-- drp start--------------- -->
+              <li class="group relative">
+                <a
+                  href=""
+                  class="text-[14px] inline-block text-font py-5 px-4 font-medium hover:text-primary"
+                  >Our Concern
+                  <i class="fa-solid fa-angle-down gap-2 text-[14px]"></i
+                ></a>
+
+                <div
+                  class="w-0 h-[4px] group-hover:w-full bg-primary duration-300"
+                ></div>
+
+                <ul
+                  class="absolute shadow-lg w-[250px] border-l-[4px] border-primary scale-0 group-hover:scale-100 origin-top-left duration-700"
+                >
+                  <li
+                    class="text-gray-600 border-b-[2px] border-gray-300 border-dashed"
+                  >
+                    <a href="" class="inline-block p-3 text-[14px]"
+                      >The Elite Fly Air Travel</a
+                    >
+                  </li>
+                  <li
+                    class="text-gray-600 border-b-[2px] border-gray-300 border-dashed"
+                  >
+                    <a href="" class="inline-block p-3 text-[14px]"
+                      >Saif Wood Tech</a
+                    >
+                  </li>
+                  <li class="text-gray-600">
+                    <a href="" class="inline-block p-3 text-[14px]"
+                      >EBL Agent Banking</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <!-- drp down- end-------------- -->
+              <li class="group">
+                <a
+                  href=""
+                  class="text-[14px] text-font py-5 px-4 inline-block hover:text-primary"
+                  >Our Clint</a
+                >
+                <div
+                  class="h-[4px] w-0 group-hover:w-full bg-primary duration-300"
+                ></div>
+              </li>
+              <li class="group">
+                <a
+                  href=""
+                  class="text-[14px] text-font py-5 px-4 inline-block hover:text-primary"
+                  >Gallery</a
+                >
+                <div
+                  class="h-[4px] w-0 group-hover:w-full bg-primary duration-300"
+                ></div>
+              </li>
+            </ul>
+          </div>
+          <div class="hidden lg:block">
+            <button
+              class="mr-8 text-white rounded-[4px] test-[14px] bg-primary overflow-hidden py-3 px-5 relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-font before:scale-x-0 hover:before:scale-x-100 before:duration-500"
+            >
+              <span class="relative x[-1]">Contact Us</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
   </body>
 </html>
