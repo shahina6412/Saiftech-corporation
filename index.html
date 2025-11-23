@@ -4,20 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Saiftech Corporation</title>
-    <link rel="icon" href="" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!----------------------- swiper link start--------------------->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <!-- ------------swiper link end----------------- -->
+
+    <!-- ------------google font and icon-------------------- -->
+
     <link
       href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <!-- css  -->
     <link rel="stylesheet" href="./css/all.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
+
   <body class="font-poppins">
     <header class="border-b-[1px] border-gray-200 hidden lg:block xl:block">
       <!-- icon start------------- -->
-      <div class="container max-w-[1140px] mx-auto">
+      <div class="container max-w-[1140px] mx-auto lg:px-0 px-6">
         <div class="flex items-center justify-between py-4 lg:px-8">
           <div>
             <ul class="flex items-center justify-start gap-2">
@@ -70,24 +79,26 @@
         </div>
       </div>
     </header>
+    <!-- nav bar start --------------- -->
     <nav>
-      <div class="container pl-6 max-w-[1140px] mx-auto">
+      <div class="container max-w-[1140px] mx-auto p-4 lg:px-0 px-6">
         <div class="flex items-center justify-between">
           <div>
             <a href="">
               <img
-                src="./New folder/logo.png"
+                src="./images/logo.png"
                 alt=""
-                class="w-[120px] h-[80px] items-center"
+                class="w-30 h-20 items-center"
             /></a>
           </div>
-          <div class="md:hidden">
-            <button>
-              <i
-                class="fa-solid fa-bars text-primary text-[20px] mr-[10px]"
-              ></i>
+          <!--  ----------toggle -------------------- -->
+          <div class="block md:hidden">
+            <button id="nav-btn">
+              <i class="fa-solid fa-bars text-primary text-[25px]"></i>
             </button>
           </div>
+
+          <!-- ---------------end toggle--------------- -->
           <div class="hidden md:block">
             <ul class="flex items-center justify-center gap-0">
               <li>
@@ -104,7 +115,7 @@
                   >About Us</a
                 >
                 <div
-                  class="h-[3px] w-0 group-hover:w-full bg-primary duration-300"
+                  class="h-[4px] w-0 group-hover:w-full bg-primary duration-300"
                 ></div>
               </li>
 
@@ -130,7 +141,7 @@
                 ></div>
 
                 <ul
-                  class="absolute w-[250px] border-l-[4px] border-primary shadow-lg scale-0 group-hover:scale-100 duration-700 origin-[2%_2%] transform-flat"
+                  class="absolute z-[1000] bg-white w-[250px] border-l-[4px] border-primary shadow-lg scale-0 group-hover:scale-100 duration-700 origin-[2%_2%] transform-flat"
                 >
                   <li
                     class="text-gray-600 border-b-[2px] border-dashed border-gray-300 hover:text-primary"
@@ -167,7 +178,7 @@
                 ></div>
 
                 <ul
-                  class="absolute shadow-lg w-[250px] border-l-[4px] border-primary scale-0 group-hover:scale-100 origin-top-left duration-700"
+                  class="absolute z-[1000] bg-white shadow-lg w-[250px] border-l-[4px] border-primary scale-0 group-hover:scale-100 origin-top-left duration-700"
                 >
                   <li
                     class="text-gray-600 border-b-[2px] border-gray-300 border-dashed"
@@ -221,7 +232,944 @@
             </button>
           </div>
         </div>
+
+        <!-- mobile menu start-------------------- -->
+        <div
+          id="mobile-menu"
+          class="absolute left-0 slide duration-300 w-full z-[100] block md:hidden"
+        >
+          <ul id="mobile-list" class="pl-[35px] bg-white">
+            <li class="py-[5px]">
+              <a
+                class="font-semibold text-[12px] text-font hover:text-primary"
+                href=""
+                >Home</a
+              >
+            </li>
+            <li class="py-[5px]">
+              <a
+                class="font-semibold text-[12px] text-font hover:text-primary"
+                href=""
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-semibold text-[12px] text-font hover:text-primary"
+                href=""
+                >Services</a
+              >
+            </li>
+
+            <li class="py-[5px]">
+              <span
+                id="sub-category1"
+                class="font-semibold text-[12px] text-font hover:text-primary"
+              >
+                Product <i class="fa-solid fa-angle-down"></i
+              ></span>
+              <ul
+                id="sub-menu"
+                class="pl-6 left-0 duration-500 z-[100] w-full slide h-0"
+              >
+                <li class="py-[5px]">
+                  <a class="font-semibold text-font text-[12px]" href=""
+                    >Domestic-water-purifier</a
+                  >
+                </li>
+                <li class="py-[5px]">
+                  <a class="font-semibold text-font text-[12px]" href="">
+                    Filtration-media-chemicals</a
+                  >
+                </li>
+                <li class="py-[5px]">
+                  <a class="font-semibold text-font text-[12px]" href=""
+                    >Accessories</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="py-[5px]">
+              <span
+                id="sub-category2"
+                class="text-[12px] font-semibold text-font hover:text-primary"
+              >
+                Our Concern <i class="fa-solid fa-angle-down"></i
+              ></span>
+              <ul
+                id="sub-menu2"
+                class="pl-6 slide duration-500 h-0 w-full z-[1000]"
+              >
+                <li class="py-[5px]">
+                  <a class="font-semibold text-font text-[12px]" href=""
+                    >The Elite Fly Air Travel</a
+                  >
+                </li>
+                <li class="py-[5px]">
+                  <a class="font-semibold text-font text-[12px]" href=""
+                    >Saif wood tech solution</a
+                  >
+                </li>
+                <li class="py-[5px]">
+                  <a class="font-semibold text-font text-[12px]" href=""
+                    >EBL AGENT BANKING</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="py-[5px]">
+              <a
+                class="font-semibold text-[12px] text-font hover:text-primary"
+                href=""
+                >Our Clint</a
+              >
+            </li>
+            <li class="py-[5px]">
+              <a
+                class="font-semibold text-[12px] text-font hover:text-primary"
+                href=""
+                >Gallery</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- mobile menu end--------------------- -->
       </div>
     </nav>
+
+    <!-- -------------bannerstrat-------------- -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div
+          class="swiper-slide bg-[url(/images/slider_banner.jpg)] !h-[600px] bg-cover bg-center"
+        >
+          <div class="container max-w-[1140px] mx-auto h-full lg:px-0 px-6">
+            <div
+              class="content flex flex-col items-start justify-center h-full"
+            >
+              <h1
+                class="text-font text-[40px] font-bold w-[600px] leading-[60px] mb-6 opacity-0 translate-y-[30px]"
+              >
+                Always Want Safe <span class="text-primary">And</span> Good
+                Water For
+                <span class="text-primary">Healthy Life</span>
+              </h1>
+              <p class="text-font text-[14px] opacity-0 translate-y-[30px]">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Tempora, sequi.
+              </p>
+              <button
+                class="opacity-0 translate-y-[-20px] mt-6 text-white rounded-[4px] test-[14px] bg-primary overflow-hidden py-3 px-5 relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-font before:scale-x-0 hover:before:scale-x-100 before:duration-500"
+              >
+                <span class="text-white relative x[-1]">Learn More</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide bg-[url(/images/slider_banner_4.jpg)] !h-[600px] bg-cover bg-center"
+        >
+          <div class="container max-w-[1140px] mx-auto h-full lg:px-0 px-6">
+            <div
+              class="content flex flex-col items-start justify-center h-full"
+            >
+              <h1
+                class="opacity-0 translate-y-[30px] text-white text-[40px] font-bold w-[600px] leading-[60px] mt-[80px] mb-6"
+              >
+                The Elit Fly Air Travel. <br />
+                Fly Elite <span class="text-primary"> Fly Safe</span>
+              </h1>
+              <p
+                class="opacity-0 translate-y-[30px] text-white text-[20px] mb-2"
+              >
+                Nimshar, Cumilla, Bangladesh
+              </p>
+              <p class="opacity-0 translate-y-[30px] text-white text-[20px">
+                Call Now: +8801612-702484, +8801612-951130
+              </p>
+
+              <button
+                class="mt-6 opacity-0 translate-y-[-20px] text-white rounded-[4px] test-[14px] bg-primary overflow-hidden py-3 px-5 relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-font before:scale-x-0 hover:before:scale-x-100 before:duration-500"
+              >
+                <span class="text-white relative x[-1]">Learn More</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide bg-[url(/images/slider_banner_5.jpg)] !h-[600px] bg-cover bg-center"
+        >
+          <div class="container max-w-[1140px] mx-auto h-full lg:px-0 px-6">
+            <div
+              class="content flex flex-col items-start justify-center h-full"
+            >
+              <p
+                class="opacity-0 translate-y-[30px] text-white text-[20px] mb-2"
+              >
+                Nimshar, Cumilla, Bangladesh
+              </p>
+              <p class="opacity-0 translate-y-[32px] text-white text-[20px">
+                Call Now: +8801612-702484, +8801612-951130
+              </p>
+
+              <button
+                class="opacity-0 translate-y-[-20px] mt-6 text-white rounded-[4px] test-[14px] bg-primary overflow-hidden py-3 px-5 relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-font before:scale-x-0 hover:before:scale-x-100 before:duration-500"
+              >
+                <span class="text-white relative x[-1]">Learn More</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide bg-blue-950 !h-[600px] bg-cover">
+          <div class="container max-w-[1140px] mx-auto h-full">
+            <div
+              class="content flex flex-col items-center justify-center h-full"
+            >
+              <h1
+                class="opacity-0 translate-y-[30px] text-primary text-[40px] font-bold leading-[40px] mb-6"
+              >
+                Solution
+              </h1>
+              <p
+                class="opacity-0 translate-y-[30px] text-white text-[20px] mb-2"
+              >
+                Nimshar, Cumilla, Bangladesh
+              </p>
+              <p class="opacity-0 translate-y-[30px] text-white text-[20px">
+                Call Now: +8801612-702484, +8801612-951130
+              </p>
+
+              <button
+                class="mt-6 opacity-0 translate-y-[-20px] text-white rounded-[4px] test-[14px] bg-primary overflow-hidden py-3 px-5 relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-font before:scale-x-0 hover:before:scale-x-100 before:duration-500"
+              >
+                <span class="text-white relative x[-1]">View More</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- swiper click -->
+      <div
+        class="swiper-button-next !h-[50px] !w-[50px] !opacity-100 !hidden md:!block"
+      >
+        <div
+          class="cursor-pointer flex items-center justify-center h-[50px] w-[50px] bg-primary lg:!rounded-full md:!rounded-2xl"
+        >
+          <i class="fa-solid fa-angle-right text-2xl text-white"></i>
+        </div>
+      </div>
+      <div
+        class="swiper-button-prev !h-[50px] !w-[50px] !opacity-100 !cursor-pointer !hidden md:!block"
+      >
+        <div
+          class="cursor-pointer flex items-center justify-center h-[50px] w-[50px] bg-primary lg:!rounded-full md:!rounded-2xl"
+        >
+          <i class="fa-solid fa-angle-left text-2xl text-white"></i>
+        </div>
+      </div>
+    </div>
+    <!-- ----------bannerend------------------ -->
+    <!-- ---------------brand start------------------------------ -->
+    <section
+      id="brand"
+      class="relative z-[1000] top-0 lg:top-[-80px] mt-[20px]"
+    >
+      <div class="container max-w-[1140px] mx-auto lg:px-0 px-6 mb-[100px]">
+        <div
+          class="flex flex-col md:flex-row md:flex-wrap items-center justify-between"
+        >
+          <div
+            class="relative w-full md:w-[48%] lg:w-[31%] h-[160px] bg-primary mb-6 relative hover:translate-y-[-10px] duration-300"
+          >
+            <img
+              src="./images/brand_logo.png"
+              alt=""
+              class="object-cover w-full h-full"
+            />
+            <div
+              class="absolute p-[30px] bg-[#1a76d1c7] top-0 left-0 z-[1] w-full h-full"
+            >
+              <h2 class="text-white text-[14px] font-normal">OUR BRAND</h2>
+              <h2 class="text-white md:text-[20px] text-[16px] font-[600] mt-4">
+                EBL Agent Banking
+              </h2>
+              <div class="group">
+                <a
+                  href=""
+                  class="text-white text-[14px] font-normal mt-4 inline-block"
+                >
+                  Vew More <i class="fa-solid fa-arrow-right ml-3"></i>
+                  <div
+                    class="w-0 h-[2px] bg-white group-hover:w-full duration-300"
+                  ></div
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="relative w-full md:w-[48%] lg:w-[31%] h-[160px] bg-primary mb-6 relative hover:translate-y-[-10px] duration-300"
+          >
+            <img
+              src="./images/brand_logo_1.png"
+              alt=""
+              class="object-cover w-full h-full"
+            />
+            <div
+              class="absolute p-[30px] bg-[#1a76d1c7] top-0 left-0 z-[1] w-full h-full"
+            >
+              <h2 class="text-white text-[14px] font-normal">OUR BRAND</h2>
+              <h2 class="text-white md:text-[20px] text-[16px] font-[600] mt-4">
+                The Elite Fly Air Travel
+              </h2>
+              <div class="group">
+                <a
+                  href=""
+                  class="text-white text-[14px] font-normal mt-4 inline-block"
+                >
+                  Vew More <i class="fa-solid fa-arrow-right ml-3"></i>
+                  <div
+                    class="w-0 h-[2px] bg-white group-hover:w-full duration-300"
+                  ></div
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="relative w-full md:w-full lg:w-[31%] h-[160px] bg-primary mb-6 relative hover:translate-y-[-10px] duration-300"
+          >
+            <img
+              src="./images/brand_logo_3.png"
+              alt=""
+              class="object-cover w-full h-full"
+            />
+            <div
+              class="absolute p-[30px] bg-[#1a76d1c7] top-0 left-0 z-[1] w-full h-full"
+            >
+              <h2 class="text-white text-[14px] font-normal">OUR BRAND</h2>
+              <h2 class="text-white md:text-[20px] text-[16px] font-[600] mt-4">
+                Saif Wood Tech Solution
+              </h2>
+              <div class="group">
+                <a
+                  href=""
+                  class="text-white text-[14px] font-normal mt-4 inline-block"
+                >
+                  Vew More <i class="fa-solid fa-arrow-right ml-3"></i>
+                  <div
+                    class="w-0 h-[2px] bg-white group-hover:w-full duration-300"
+                  ></div
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ---------------brand end------------------------------ -->
+    <!-- ----------------Service start----------------------- -->
+    <section id="service ">
+      <div class="container max-w-[1140px] mx-auto lg:px-0 px-6">
+        <div class="text-center">
+          <h2 class="text-3xl text-font font-[600] mb-8">Our Services</h2>
+          <img src="./images/section-img.png" alt="" class="mx-auto mb-8" />
+          <p class="text-[14px] text-gray-500 mb-[60px]">
+            We Are Always Ready to Help You & Your Family
+          </p>
+
+          <div
+            class="mt-10 flex flex-col lg:flex-row lg:flex-wrap items-start justify-between"
+          >
+            <div class="w-full lg:w-1/3 mb-5 group">
+              <div
+                class="w-[100px] h-[100px] mx-auto flex items-center justify-center border-[1px] border-gray-100 group-hover:bg-primary duration-300 rounded-full"
+              >
+                <i
+                  class="fa-brands fa-rev text-[50px] text-primary group-hover:text-white duration-300"
+                ></i>
+              </div>
+
+              <h4
+                class="text-[#2C2D3F] text-[21px] text-center font-semibold mt-3"
+              >
+                Reverse Osmosis (RO) Water Purification System
+              </h4>
+            </div>
+
+            <!-- <div class="flex-row lg:flex items-start justify-between mt-10">
+            <div class="w-full group lg:w-[31%] md:w-2/4 p-1">
+              <div
+                class="mx-auto mb-3 flex items-center justify-center w-[100px] h-[100px] rounded-full border-2 border-gray-200 group-hover:bg-primary duration-300"
+              >
+                <i
+                  class="fa-brands fa-rev text-6xl text-primary group-hover:text-white duration-300"
+                ></i>
+              </div>
+
+              <h2 class="text-[20px] font-semibold text-font text-center">
+                Reverse Osmosis (RO) Water Purification System
+              </h2>
+            </div> -->
+            <div
+              class="group flex flex-col items-center justify-centert w-full lg:w-[31%] text-center p-1"
+            >
+              <div
+                class="mx-auto mb-3 flex items-center justify-center w-[100px] h-[100px] rounded-full border-2 border-gray-200 group-hover:bg-primary duration-300"
+              >
+                <i
+                  class="fa-brands fa-playstation text-6xl text-primary group-hover:text-white duration-300"
+                ></i>
+              </div>
+
+              <h2 class="text-[20px] font-semibold text-font">
+                Water Treatment Plant
+              </h2>
+            </div>
+            <div class="group w-full lg:w-[31%] text-center p-1">
+              <div
+                class="mx-auto mb-3 flex items-center justify-center w-[100px] h-[100px] rounded-full border-2 border-gray-200 group-hover:bg-primary duration-300"
+              >
+                <i
+                  class="fa-solid fa-meteor text-6xl text-primary group-hover:text-white duration-300"
+                ></i>
+              </div>
+
+              <h2 class="text-[20px] font-semibold text-font">
+                Iron Removal Plant
+              </h2>
+            </div>
+          </div>
+          <div class="flex-row lg:flex items-center justify-between">
+            <div class="group w-full lg:w-[31%] text-center p-1">
+              <div
+                class="mx-auto mb-3 flex items-center justify-center w-[100px] h-[100px] rounded-full border-2 border-gray-200 group-hover:bg-primary duration-300"
+              >
+                <i
+                  class="fa-brands fa-rev text-6xl text-primary group-hover:text-white duration-300"
+                ></i>
+              </div>
+
+              <h2 class="text-[20px] font-semibold text-font">
+                Saline Water Treatment Plant
+              </h2>
+            </div>
+            <div class="group w-full lg:w-[31%] text-center p-1">
+              <div
+                class="mx-auto mb-3 flex items-center justify-center w-[100px] h-[100px] rounded-full border-2 border-gray-200 group-hover:bg-primary duration-300"
+              >
+                <i
+                  class="fa-brands fa-playstation text-6xl text-primary group-hover:text-white duration-300"
+                ></i>
+              </div>
+
+              <h2 class="text-[20px] font-semibold text-font">
+                Hot & Cold Water Dispenser
+              </h2>
+            </div>
+            <div class="group w-full lg:w-[31%] text-center p-1">
+              <div
+                class="mx-auto mb-3 flex items-center justify-center w-[100px] h-[100px] rounded-full border-2 border-gray-200 group-hover:bg-primary duration-300"
+              >
+                <i
+                  class="fa-solid fa-meteor text-6xl text-primary group-hover:text-white duration-300"
+                ></i>
+              </div>
+
+              <h2 class="text-[20px] font-semibold text-font">
+                All Kind of (RO) Accessories
+              </h2>
+            </div>
+          </div>
+          <div class="flex-row lg:flex items-center justify-between">
+            <div class="group w-full lg:w-[31%] text-center p-1">
+              <div
+                class="mx-auto mb-3 flex items-center justify-center w-[100px] h-[100px] rounded-full border-2 border-gray-200 group-hover:bg-primary duration-300"
+              >
+                <i
+                  class="fa-brands fa-rev text-6xl text-primary group-hover:text-white duration-300"
+                ></i>
+              </div>
+
+              <h2 class="text-[20px] font-semibold text-font">
+                Commercial Plant
+              </h2>
+            </div>
+            <div class="group w-full lg:w-[31%] text-center p-1">
+              <div
+                class="mx-auto mb-3 flex items-center justify-center w-[100px] h-[100px] rounded-full border-2 border-gray-200 group-hover:bg-primary duration-300"
+              >
+                <i
+                  class="fa-brands fa-playstation text-6xl text-primary group-hover:text-white duration-300"
+                ></i>
+              </div>
+
+              <h2 class="text-[20px] font-semibold text-font">
+                Dialysis Machine Water
+              </h2>
+            </div>
+            <div class="group w-full lg:w-[31%] text-center p-1">
+              <div
+                class="mx-auto mb-3 flex items-center justify-center w-[100px] h-[100px] rounded-full border-2 border-gray-200 group-hover:bg-primary duration-300"
+              >
+                <i
+                  class="fa-solid fa-meteor text-6xl text-primary group-hover:text-white duration-300"
+                ></i>
+              </div>
+
+              <h2 class="text-[20px] font-semibold text-font">
+                Industrial Plant
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------Service end----------------------- -->
+
+    <!-- ------------- call action overlay start--------------- -->
+
+    <section
+      id="contact"
+      class="bg-[url(/images/call-bg-1.jpg)] bg-cover bg-center bg-fixed mt-20"
+    >
+      <div class="bg-[#1a76d1c7] py-20 text-center">
+        <h2 class="text-white text-[30px] mb-3 font-semibold">
+          Our Hotline Service Number
+        </h2>
+        <h2 class="text-white text-[30px] mb-3 font-semibold">
+          Call : +88 01712-638732,
+        </h2>
+        <h2 class="text-white text-[30px] mb-3 font-semibold">
+          +88 01713-357222
+        </h2>
+        <h3 class="text-white text-[14px] mb-6 mt-6 font-normal">
+          Just call our customer care number to solve any of your problems.
+        </h3>
+
+        <div class="mt-5 text-center group">
+          <button
+            class="mr-8 text-primary rounded-[4px] test-[14px] bg-white overflow-hidden py-3 px-5 relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-primary before:scale-x-0 hover:before:scale-x-100 before:duration-500"
+          >
+            <span class="relative x[-1] group-hover:text-white test-[14px]"
+              >Contact Us</span
+            >
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------- call action overlay end--------------- -->
+    <!------------------------ our prodcuts start ----------------- -->
+    <section id="products ">
+      <div class="container max-w-[1140px] mx-auto lg:px-0 px-6">
+        <div class="text-center mt-30">
+          <h2 class="text-3xl text-font font-[600] mb-8">
+            Our latest Products
+          </h2>
+          <img
+            class="mx-auto mb-8"
+            src="./images/section-img.png"
+            alt="image"
+          />
+          <p class="text-[14px] text-gray-500 mb-[60px]">
+            Choose the best water filtration
+          </p>
+        </div>
+      </div>
+      <div class="flex-row lg:flex items-center justify-center gap-6 mx-6 mb-6">
+        <div
+          class="w-full lg:w-[30%] mb-6 h-[320px] relative rounded-2xl overflow-hidden group"
+        >
+          <img
+            class="group-hover:scale-[1.7] duration-500 mx-auto"
+            src="./images/procuct_img_01.jpg"
+            alt=""
+          />
+          <div class="bg-[#1a76d1c7] absolute bottom-0 left-0 w-full">
+            <h2 class="text-white text-2xl text-center font-mormal py-4">
+              Model No- 01
+            </h2>
+          </div>
+        </div>
+        <div
+          class="w-full lg:w-[30%] mb-6 h-[320px] relative rounded-2xl overflow-hidden group"
+        >
+          <img
+            class="group-hover:scale-[1.7] duration-500 mx-auto"
+            src="./images/procuct_img_01.jpg"
+            alt=""
+          />
+          <div class="bg-[#1a76d1c7] absolute bottom-0 left-0 w-full">
+            <h2 class="text-white text-2xl text-center font-mormal py-4">
+              Model No- 01
+            </h2>
+          </div>
+        </div>
+        <div
+          class="w-full lg:w-[30%] mb-6 h-[320px] relative rounded-2xl overflow-hidden group"
+        >
+          <img
+            class="group-hover:scale-[1.7] duration-500 mx-auto"
+            src="./images/procuct_img_01.jpg"
+            alt=""
+          />
+          <div class="bg-[#1a76d1c7] absolute bottom-0 left-0 w-full">
+            <h2 class="text-white text-2xl text-center font-mormal py-4">
+              Model No- 01
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="flex-row lg:flex items-center justify-center gap-6 mx-6 mb-6">
+        <div
+          class="w-full lg:w-[30%] mb-6 h-[320px] relative rounded-2xl overflow-hidden group"
+        >
+          <img
+            class="group-hover:scale-[1.7] duration-500 mx-auto"
+            src="./images/procuct_img_01.jpg"
+            alt=""
+          />
+          <div class="bg-[#1a76d1c7] absolute bottom-0 left-0 w-full">
+            <h2 class="text-white text-2xl text-center font-mormal py-4">
+              Model No- 01
+            </h2>
+          </div>
+        </div>
+        <div
+          class="w-full lg:w-[30%] mb-6 h-[320px] relative rounded-2xl overflow-hidden group"
+        >
+          <img
+            class="group-hover:scale-[1.7] duration-500 mx-auto"
+            src="./images/procuct_img_01.jpg"
+            alt=""
+          />
+          <div class="bg-[#1a76d1c7] absolute bottom-0 left-0 w-full">
+            <h2 class="text-white text-2xl text-center font-mormal py-4">
+              Model No- 01
+            </h2>
+          </div>
+        </div>
+        <div
+          class="w-full lg:w-[30%] mb-6 h-[320px] relative rounded-2xl overflow-hidden group"
+        >
+          <img
+            class="group-hover:scale-[1.7] duration-500 mx-auto"
+            src="./images/procuct_img_01.jpg"
+            alt=""
+          />
+          <div class="bg-[#1a76d1c7] absolute bottom-0 left-0 w-full">
+            <h2 class="text-white text-2xl text-center font-mormal py-4">
+              Model No- 01
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="flex-row lg:flex items-center justify-center gap-6 mx-6 mb-6">
+        <div
+          class="w-full lg:w-[30%] mb-6 h-[320px] relative rounded-2xl overflow-hidden group"
+        >
+          <img
+            class="group-hover:scale-[1.7] duration-500 mx-auto"
+            src="./images/procuct_img_01.jpg"
+            alt=""
+          />
+          <div class="bg-[#1a76d1c7] absolute bottom-0 left-0 w-full">
+            <h2 class="text-white text-2xl text-center font-mormal py-4">
+              Model No- 01
+            </h2>
+          </div>
+        </div>
+        <div
+          class="w-full lg:w-[30%] mb-6 h-[320px] relative rounded-2xl overflow-hidden group"
+        >
+          <img
+            class="group-hover:scale-[1.7] duration-500 mx-auto"
+            src="./images/procuct_img_01.jpg"
+            alt=""
+          />
+          <div class="bg-[#1a76d1c7] absolute bottom-0 left-0 w-full">
+            <h2 class="text-white text-2xl text-center font-mormal py-4">
+              Model No- 01
+            </h2>
+          </div>
+        </div>
+        <div
+          class="w-full lg:w-[30%] mb-6 h-[320px] relative rounded-2xl overflow-hidden group"
+        >
+          <img
+            class="group-hover:scale-[1.7] duration-500 mx-auto"
+            src="./images/procuct_img_01.jpg"
+            alt=""
+          />
+          <div class="bg-[#1a76d1c7] absolute bottom-0 left-0 w-full">
+            <h2 class="text-white text-2xl text-center font-mormal py-4">
+              Model No- 01
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="flex-row lg:flex items-center justify-center gap-6 mx-6 mb-6">
+        <div
+          class="w-full lg:w-[30%] mb-6 h-[320px] relative rounded-2xl overflow-hidden group"
+        >
+          <img
+            class="group-hover:scale-[1.7] duration-500 mx-auto"
+            src="./images/procuct_img_01.jpg"
+            alt=""
+          />
+          <div class="bg-[#1a76d1c7] absolute bottom-0 left-0 w-full">
+            <h2 class="text-white text-2xl text-center font-mormal py-4">
+              Model No- 01
+            </h2>
+          </div>
+        </div>
+        <div
+          class="w-full lg:w-[30%] mb-6 h-[320px] relative rounded-2xl overflow-hidden group"
+        >
+          <img
+            class="group-hover:scale-[1.7] duration-500 mx-auto"
+            src="./images/procuct_img_01.jpg"
+            alt=""
+          />
+          <div class="bg-[#1a76d1c7] absolute bottom-0 left-0 w-full">
+            <h2 class="text-white text-2xl text-center font-mormal py-4">
+              Model No- 01
+            </h2>
+          </div>
+        </div>
+        <div
+          class="w-full lg:w-[30%] mb-6 h-[320px] relative rounded-2xl overflow-hidden group"
+        >
+          <img
+            class="group-hover:scale-[1.7] duration-500 mx-auto"
+            src="./images/procuct_img_01.jpg"
+            alt=""
+          />
+          <div class="bg-[#1a76d1c7] absolute bottom-0 left-0 w-full">
+            <h2 class="text-white text-2xl text-center font-mormal py-4">
+              Model No- 01
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-20 mb-20">
+        <button
+          class="text-white rounded-[4px] text-[20px] bg-primary overflow-hidden py-4 px-12 relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-font before:scale-x-0 hover:before:scale-x-100 before:duration-500"
+        >
+          <span class="relative x[-1]">Veiw More </span>
+        </button>
+      </div>
+    </section>
+
+    <!------------------------ our prodcuts end ----------------- -->
+
+    <!-- -------------------------news letter start---------------------------------- -->
+    <section id="newsletter" class="bg-[#EDF2FF] py-[80px]">
+      <div class="container max-w-[1140px] mx-auto p-4 lg:px-6 px-6">
+        <div
+          class="flex flex-col lg:flex-row items-center gap-4 justify-between"
+        >
+          <div class="w-full lg:w-[48%]">
+            <h2 class="lg:text-left text-[22px] text-font text-center">
+              Sign up for newsletter
+            </h2>
+            <h3
+              class="text-[14px] text-center mb-4 text-gray-500 lg:text-left mt-4 leading-6"
+            >
+              Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, <br />
+              homero alterum.
+            </h3>
+          </div>
+          <div
+            class="flex flex-col md:flex-row items-center md:justify-center lg:justify-between gap-4"
+          >
+            <input
+              type="email"
+              placeholder="Enter your mail"
+              class="bg-white w-full md:w-[300px] h-[53px] text-center rounded-[4px] text-[#333] px-[25px]"
+            />
+            <button
+              class="text-white rounded-[4px] md:w-[180px] w-full text-[14px] bg-primary overflow-hidden py-4 px-12 relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-font before:scale-x-0 hover:before:scale-x-100 before:duration-500"
+            >
+              <span class="relative x[-1]"> subscribe </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- -------------------------news letter end------------------------------ -->
+    <!-- ------------------------footer start---------------------------------- -->
+    <footer id="footer" class="bg-primary pt-[60px]">
+      <div class="container max-w-[1140px] mx-auto p-4 lg:px-6 px-6 mb-10">
+        <!-- <div class="flex-col lg:flex-row lg:flex-wrap items-start justify-between"> -->
+        <div class="flex items-start justify-between">
+          <div class="w-full lg:w-3/12 mr-6">
+            <h2 class="text-white text-xl font-semibold mb-3">About Us</h2>
+            <div class="w-[50px] h-[2px] bg-white mb-8"></div>
+            <p class="text-[13px] text-white leading-6 mb-4 text-justify">
+              Can your drinking water get rid of salt, iron and odor, etc. Use
+              American technology RO purifier to give you mineral peace and
+              clean drinking water, without any hand touch.
+            </p>
+
+            <div>
+              <ul class="flex items-center justify-start gap-2">
+                <li class="group">
+                  <a
+                    class="border-1 border-amber-50 rounded-full bg-primary p-2 flex items-center justify-center w-[30px] h-[30px] hover:bg-white duration-400"
+                    ><i
+                      class="fa-brands fa-facebook-f text-white group-hover:text-primary duration-300"
+                    ></i
+                  ></a>
+                </li>
+                <li class="group">
+                  <a
+                    href=""
+                    class="border-1 border-amber-50 rounded-full bg-primary p-2 flex items-center justify-center w-[30px] h-[30px] hover:bg-white duration-400"
+                  >
+                    <i
+                      class="fa-brands fa-instagram text-white group-hover:text-primary duration-300"
+                    ></i
+                  ></a>
+                </li>
+                <li class="group">
+                  <a
+                    href=""
+                    class="border-1 border-amber-50 rounded-full bg-primary p-2 flex items-center justify-center w-[30px] h-[30px] hover:bg-white duration-400"
+                  >
+                    <i
+                      class="fa-brands fa-linkedin-in text-white group-hover:text-primary duration-300"
+                    ></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="w-full mt-8 lg:w-3/12">
+            <h2 class="text-white text-xl font-semibold mb-3">Quick Links</h2>
+            <div class="w-[50px] h-[2px] bg-white mb-8"></div>
+            <div class="">
+              <ul>
+                <li class="group">
+                  <i
+                    class="fa-solid fa-caret-right text-white text-[13px] mr-2"
+                  ></i
+                  ><a href="" class="text-white text-[14px] font-normal"
+                    >Home</a
+                  >
+                </li>
+                <li class="group">
+                  <i
+                    class="fa-solid fa-caret-right text-white text-[13px] mr-2"
+                  ></i
+                  ><a href="" class="text-white text-[14px] font-normal"
+                    >About Us</a
+                  >
+                </li>
+                <li class="group">
+                  <i
+                    class="fa-solid fa-caret-right text-white text-[13px] mr-2"
+                  ></i
+                  ><a href="" class="text-white text-[14px] font-normal"
+                    >Home</a
+                  >
+                </li>
+                <li class="group">
+                  <i
+                    class="fa-solid fa-caret-right text-white text-[13px] mr-2"
+                  ></i
+                  ><a href="" class="text-white text-[14px] font-normal"
+                    >Home</a
+                  >
+                </li>
+                <li class="group">
+                  <i
+                    class="fa-solid fa-caret-right text-white text-[13px] mr-2"
+                  ></i
+                  ><a href="" class="text-white text-[14px] font-normal"
+                    >Home</a
+                  >
+                </li>
+
+                <li class="group">
+                  <i
+                    class="fa-solid fa-caret-right text-white text-[13px] mr-2"
+                  ></i
+                  ><a href="" class="text-white text-[14px] font-normal"
+                    >Home</a
+                  >
+                </li>
+                <li class="group">
+                  <i
+                    class="fa-solid fa-caret-right text-white text-[13px] mr-2"
+                  ></i
+                  ><a href="" class="text-white text-[14px] font-normal"
+                    >Home</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="w-full my-8 lg:w-3/12">
+            <h2 class="text-white text-xl font-semibold mb-3">Our Concern</h2>
+            <div class="w-[50px] h-[2px] bg-white mb-8"></div>
+
+            <ul>
+              <li class="group">
+                <i
+                  class="fa-solid fa-caret-right text-white text-[13px] mr-2"
+                ></i
+                ><a href="" class="text-white text-[14px] font-normal"
+                  >The Elite Fly Air Travel</a
+                >
+              </li>
+              <li class="group">
+                <i
+                  class="fa-solid fa-caret-right text-white text-[13px] mr-2"
+                ></i
+                ><a href="" class="text-white text-[14px] font-normal"
+                  >Saif Wood Tech Solution</a
+                >
+              </li>
+              <li class="group">
+                <i
+                  class="fa-solid fa-caret-right text-white text-[13px] mr-2"
+                ></i
+                ><a href="" class="text-white text-[14px] font-normal"
+                  >EBL Agent Banking</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="w-full my-8 lg:w-3/12">
+            <h2 class="text-white text-xl font-semibold mb-3">Newsletter</h2>
+            <div class="w-[50px] h-[2px] bg-white mb-8"></div>
+            <form action="">
+              <input
+                type="text"
+                placeholder="Your email address"
+                class="w-[200px] h-[50px] border-[1px] border-amber-50 px-[25px] rounded-[4px]"
+              /><button class="button w-[60px] h-[51px] bg-white rounded-[4px]">
+                <i class="fa-regular fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="text-center bg-[#176ABC] ]">
+        <h3 class="py-6 text-white text-[12px]">
+          Copyright © 2024 Design and Developed by
+          <a href="" class="underline">www.rainbowtechit.com</a> । All Right
+          Reserved
+        </h3>
+      </div>
+    </footer>
+    <!-- ------------------------footer end----------------------------------------- -->
+
+    <!-- -----------swiper------------------ -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!-- ----------------my js-------------------- -->
+    <script type="module" src="./main.js"></script>
   </body>
 </html>

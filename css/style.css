@@ -7,3 +7,53 @@
   --font-poppins: "Poppins", sans-serif;
   --color-icon: #2c2d3f;
 }
+
+.slide {
+  clip-path: polygon(0 0, 100% 1%, 100% 1%, 0 0);
+}
+
+.active {
+  clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 100%);
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.swiper-slide-active .content h1 {
+  animation: slideUp 2s ease forwards;
+  animation-delay: 0.3s;
+}
+.swiper-slide-active .content p {
+  animation: slideUp 2s ease forwards;
+  animation-delay: 0.6s;
+}
+@keyframes slidedown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(60px);
+  }
+}
+.swiper-slide-active .content button {
+  animation: slidedown 2s ease forwards;
+  animation-delay: 0.9s;
+}
+
+.swiper-button-next svg {
+  display: none;
+}
+.swiper-button-prev svg {
+  display: none;
+}
